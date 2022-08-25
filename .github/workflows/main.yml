@@ -12,9 +12,9 @@ jobs:
      db:
       image: postgres:11
       env:
-       POSTGRES_USER: toy_app
-       POSTGRES_DB: toy_app_test
-       POSTGRES_PASSWORD: ""
+       POSTGRES_USER: postgres
+       POSTGRES_PASSWORD: postgres
+    
       
       ports: ['5432:5432']
     runs-on: ubuntu-latest
@@ -37,13 +37,7 @@ jobs:
         run: |
           bundle install
 
-      - name: Prepare Database
-        env:
-          RAILS_NEW: test
-          PGHOST: localhost
-          PGUSER: toy_app
-        run: |
-          bin/rails db:setup
+
 
       - name: Run Tests
 
