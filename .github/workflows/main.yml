@@ -42,7 +42,7 @@ jobs:
       - name: Run Tests
 
         run: |
-          bin/rspec
+          bundle exec rails db:rails
 
 
   security:
