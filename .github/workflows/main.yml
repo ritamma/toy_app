@@ -13,7 +13,7 @@ jobs:
       image: postgres:11
       env:
        POSTGRES_USER: toy_app
-       POSTGRES_DB: toy_apptest
+       POSTGRES_DB: toy_app_test
        POSTGRES_PASSWORD: ""
       
       ports: ['5432:5432']
@@ -46,8 +46,7 @@ jobs:
           bin/rails db:setup
 
       - name: Run Tests
-        env:
-         DATABASE_URL: postgres://postgres:@localhost:5432/toy_app_test
+
         run: |
           bin/rspec
 
