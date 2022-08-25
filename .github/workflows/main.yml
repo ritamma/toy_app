@@ -36,6 +36,10 @@ jobs:
       - name: Install Gems
         run: |
           bundle install
+          
+      - name: Set up database schema
+        run: bin/rails db:schema:load
+
 
 
   security:
