@@ -38,13 +38,6 @@ jobs:
           bundle install
 
 
-
-      - name: Run Tests
-
-        run: |
-          bundle exec rails test
-
-
   security:
     runs-on: ubuntu-latest
     steps:
