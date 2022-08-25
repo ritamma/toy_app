@@ -42,7 +42,7 @@ jobs:
       - name: Run Tests
 
         run: |
-          bundle exec rails db:rails
+          bundle exec rails test
 
 
   security:
